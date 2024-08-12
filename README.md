@@ -24,7 +24,7 @@ This project, **Wall-E**, is a React-based HD wallet for Solana, built with mode
 
 ## Demo
 
-(Include a link to your deployed project here, if applicable)
+https://wall-e-iota.vercel.app
 
 ## Features
 
