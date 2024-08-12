@@ -1,7 +1,7 @@
 import { generateMnemonic, mnemonicToSeedSync, validateMnemonic } from "bip39";
 import { derivePath } from "ed25519-hd-key";
 import { Keypair } from "@solana/web3.js";
-import {encode} from "bs58";
+import bs58 from "bs58";
 
 const useMnemonic = () => {
   // Generate Mnemonic
@@ -28,7 +28,7 @@ const useMnemonic = () => {
     const derivedSeed = derivePath(derivationPath, seed.toString("hex")).key;
     const keypair = {
       publicKey: Keypair.fromSeed(derivedSeed).publicKey,
-      secretKey: encode(Keypair.fromSeed(derivedSeed).secretKey)
+      secretKey: bs58.encode(Keypair.fromSeed(derivedSeed).secretKey)
     }
     return { keypair, derivationPath };
   };

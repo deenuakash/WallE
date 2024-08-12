@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useMnemonic from "../hooks/useMnemonic";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -85,10 +85,6 @@ const Content = () => {
     setInputKeyPairs([]);
     setIndex(0);
   };
-
-  useEffect(() => {
-    console.log(inputSecret);
-  }, [inputSecret]);
 
   return (
     <>
